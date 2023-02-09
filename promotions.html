@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <script type="module" src="main.js"></script>
+        <link href="main.scss" rel="stylesheet">
+        <script type="text/javascript" src="popup.js"></script>
+        <style>
+            table, th, td {
+                text-align: center;
+            }
+            .center-text {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body class="mb-2">
+
+        <div class="modal fade" id="manual" tabindex="-1" aria-labelledby="manualLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="manualLabel">Add a Promotion</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form method="post" id="add">
+                    <div class="row form-group">
+                        <label class="col-6" for="Sender">
+                            <strong>Sender</strong>
+                        </label>
+                        <div class="col-6">
+                            <input type="text" id="sender" name="sender" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-6" for="Promo">
+                            <strong>Promotion/Offer</strong>
+                        </label>
+                        <div class="col-6">
+                            <input type="text" id="promo" placeholder="$ or %" name="promo" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-6" for="Expiration">
+                            <strong>Expiration Date</strong>
+                        </label>
+                        <div class="col-6">
+                            <input type="date" class="center-text" id="exp" name="exp" required>
+                        </div>
+                    </div>
+                      
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="submit" form="add" class="btn btn-success">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        <div class="container mt-2" style="width: 420px;"></div>
+            <table class="table table-hover table-sm align-middle caption-top">
+                <caption>Active promotions</caption>
+                <thead class="table-success">
+                <tr>
+                    <th scope="col">Sender</th>
+                    <th scope="col">Promo </th>
+                    <th scope="col">Expires</th>
+                </tr>
+                </thead>
+                <tbody id="table"></tbody>
+            </table>
+        </div>
+        <button class="btn btn-outline-success btn-sm float-end" data-bs-toggle="modal" data-bs-target="#manual">Manually Add Promo <i class="bi bi-plus-circle-fill"></i></button>
+        
+    </body>
+
+</html>

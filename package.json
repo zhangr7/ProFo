@@ -1,0 +1,41 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@google-cloud/local-auth": "^2.1.1",
+    "@googleapis/gmail": "^1.0.0",
+    "@inboxsdk/core": "^0.2.23",
+    "@popperjs/core": "^2.11.6",
+    "@types/gapi": "^0.0.43",
+    "@types/gapi.client": "^1.0.5",
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.3",
+    "chrome-types": "^0.1.155",
+    "gapi": "^0.0.3",
+    "gapi-script": "^1.2.0",
+    "googleapis": "^109.0.1"
+  },
+  "source": "src/contentScript.js",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.2",
+    "assert": "^2.0.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^5.7.1",
+    "crypto-browserify": "^3.12.0",
+    "events": "^3.3.0",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "parcel": "latest",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "punycode": "^1.4.1",
+    "querystring-es3": "^0.2.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0",
+    "util": "^0.12.5"
+  }
+}
